@@ -7,9 +7,9 @@
 				</header>
 
 				<div class="green__menu">
-					<button>
-						<img src="images/signal.svg" alt="">
-					</button>
+					<!-- <button> -->
+					<img src="images/signal.svg" alt="">
+					<!-- </button> -->
 				</div>
 			</div>
 
@@ -18,7 +18,7 @@
 			</div>
 
 			<div class="green__input-field">
-				<input type="text" name="amount to convert" id="input" v-model="amountToConvert" @click="selectText" @keyup.enter="convertNow">
+				<input selected type="text" name="amount to convert" id="input" v-model="amountToConvert" @click="selectText" @keyup.enter="convertNow">
 			</div>
 
 			<div class="green__lower">
@@ -103,11 +103,10 @@ export default {
 			const getCurrency = `https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/${inputCurrency}.json`
 			const response = await fetch(getCurrency);
 			const result = await response.json();
-			// add numbers with current rate of exchange, and set to data()
-			// tried and failed to use failsafe :-(
+			// multiply numbers with current rate of exchange, and set to data()
 			let outputAmount = enteredAmount * result[inputCurrency][outputCurrency];
 			console.log(outputAmount)
-			if (outputAmount === NaN) {
+			if (Number.isNaN(outputAmount)) {
 				return this.convertedAmount = 'invalid input';
 			} else {
 				return this.convertedAmount = outputAmount;
@@ -129,21 +128,26 @@ export default {
 	.home {
 		color: white;
 		margin: 0 auto;
-		height: 568px;
-		width: 320px;
+		height: 95vh;
+		min-height: 540px;
+		width: 56vh;
+		min-width: 302px;
 		border: thin solid black;
 		border-radius: 15px;
 	}
 	.card {
 		margin: 20% auto;
-		width: 290px;
-		height: 175px;
+		height: 31%;
+		width: 90%;
 		border-radius: 15px;
 	}
 	.green {
-		padding: 1rem;
+		padding: 5%;
 		background: #2D888D;
 	}
+	/* .green__menu img {
+		width: 100%;
+	} */
 	.green__header {
 		display: flex;
 		flex-flow: row nowrap;
@@ -151,9 +155,9 @@ export default {
 		justify-content: space-between;
 	}
 	.green__chip img {
-		margin: 10px 0 10px 0;
-		height: 38px; 
-		width: 46px;
+		margin: 4% 0;
+		/* height: 28%;  */
+		width: 19%;
 	}
 
 	.green input {
@@ -174,15 +178,15 @@ export default {
 
 	.green__lower select {
 		position: absolute;
-		top: 7px;
+		top: 19%;
 		border: none;
 		width: 100%;
 	}
 
 	.green__lower-whitespace, .red__lower-whitespace {
 		width: 50%;
-		height: 28px;
-		margin-top: 10px;
+		height: 1.8rem;
+		margin-top: 4%;
 		background: white;
 		color: black;
 		border-radius: 5px;
@@ -191,7 +195,7 @@ export default {
 
 	.red {
 		background: #A3393B;
-		padding-top: 1rem;
+		padding-top: 5%;
 	}
 	.red__header {
 		/* margin-top: 1rem; */
@@ -199,16 +203,16 @@ export default {
 		height: 2rem;
 		background: black;
 	}
-	.red__header-text {
+	/* .red__header-text {
 		display: flex;
 		flex-flow: row nowrap;
 		justify-content: space-between;
 		color: white;
 		padding: 7px 1rem 0 1rem;
-	}
+	} */
 	.red__output-field {
 		width: 90%;
-		margin: 1rem auto;
+		margin: 5.5% auto;
 		height: 2rem;
 		background: white;
 		color: black;
@@ -218,21 +222,21 @@ export default {
 		justify-content: space-between; */
 	}
 	.red__output-field p {
-		padding: 5px 0 0 5px;
+		padding: 2% 0 0 2%;
 	}
 	.red__faketext img {
 		width: 75%;
-		margin-left: 50px;
+		margin-left: 14%;
 	}
 	.red__lower-whitespace {
-		margin-left: 1rem;
+		margin-left: 5%;
 	}
 	.red__lower-text {
-		margin-right: 1rem;
+		margin-right: 5%;
 	}
 	.red__lower select {
 		position: absolute;
-		top: 7px;
+		top: 19%;
 		border: none;
 		width: 100%;
 	}
