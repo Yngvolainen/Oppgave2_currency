@@ -25,8 +25,8 @@
 				<div class="green__lower-text">
 					<p>input</p>
 				</div>
+				
 				<div class="green__lower-whitespace">
-					<!-- <input type="" class="green__lower-currency"> -->
 					<select name="input currency" id="" v-model="convertFrom">
 						<option v-for="currencyName, shorthand in availableCurrencies" :value="shorthand" :key="shorthand">
 							{{ currencyName }}
@@ -54,14 +54,11 @@
 
 			<div class="red__lower">
 				<div class="red__lower-whitespace">
-				
 					<select name="output currency" id="" v-model="convertTo">
 						<option v-for="currencyName, shorthand  in availableCurrencies" :value="shorthand" :key="shorthand">
 							{{ currencyName }}
 						</option>
 					</select>
-			
-					<!-- <input type="" class="green__lower-currency"> -->
 				</div>
 
 				<div class="red__lower-text">
@@ -145,9 +142,7 @@ export default {
 		padding: 5%;
 		background: #2D888D;
 	}
-	/* .green__menu img {
-		width: 100%;
-	} */
+
 	.green__header {
 		display: flex;
 		flex-flow: row nowrap;
@@ -156,7 +151,6 @@ export default {
 	}
 	.green__chip img {
 		margin: 4% 0;
-		/* height: 28%;  */
 		width: 19%;
 	}
 
@@ -198,18 +192,11 @@ export default {
 		padding-top: 5%;
 	}
 	.red__header {
-		/* margin-top: 1rem; */
 		width: 100%;
 		height: 2rem;
 		background: black;
 	}
-	/* .red__header-text {
-		display: flex;
-		flex-flow: row nowrap;
-		justify-content: space-between;
-		color: white;
-		padding: 7px 1rem 0 1rem;
-	} */
+
 	.red__output-field {
 		width: 90%;
 		margin: 5.5% auto;
@@ -218,8 +205,6 @@ export default {
 		color: black;
 		font-size: 1.2rem;
 		border-radius: 5px;
-		/* display: flex;
-		justify-content: space-between; */
 	}
 	.red__output-field p {
 		padding: 2% 0 0 2%;
