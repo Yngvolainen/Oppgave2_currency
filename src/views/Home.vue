@@ -8,13 +8,13 @@
 
 				<div class="green__menu">
 					<!-- <button> -->
-					<img src="images/signal.svg" alt="">
+					<img src="/images/signal.svg" alt="">
 					<!-- </button> -->
 				</div>
 			</div>
 
 			<div class="green__chip">
-				<img src="images/chip.svg" alt="">
+				<img src="/images/chip.svg" alt="">
 			</div>
 
 			<div class="green__input-field">
@@ -25,7 +25,7 @@
 				<div class="green__lower-text">
 					<p>input</p>
 				</div>
-				
+
 				<div class="green__lower-whitespace">
 					<select name="input currency" id="" v-model="convertFrom">
 						<option v-for="currencyName, shorthand in availableCurrencies" :value="shorthand" :key="shorthand">
@@ -49,7 +49,7 @@
 			</div>
 
 			<div class="red__faketext">
-				<img src="images/backwards.svg" alt="">
+				<img src="/images/backwards.svg" alt="">
 			</div>
 
 			<div class="red__lower">
