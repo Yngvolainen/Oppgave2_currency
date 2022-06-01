@@ -88,6 +88,7 @@ export default {
 		const result = await response.json()
 		this.availableCurrencies = result;
 		console.log(this.availableCurrencies)
+		// MISSING TRY / CATCH 
 	},
 	methods: {
 		// convert currencies: input * output
