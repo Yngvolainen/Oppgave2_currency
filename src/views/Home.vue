@@ -130,7 +130,7 @@ export default {
 		min-height: 540px;
 		width: 56vh;
 		min-width: 302px;
-		border: thin solid black;
+		/* border: thin solid black; */
 		border-radius: 15px;
 	}
 	.card {
